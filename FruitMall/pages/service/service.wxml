@@ -1,0 +1,2 @@
+<!--pages/service/service.wxml-->
+<button type="primary" open-type="contact">点击联系客服</button>

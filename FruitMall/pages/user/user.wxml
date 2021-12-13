@@ -1,0 +1,54 @@
+<!--pages/user/user.wxml-->
+<view class="main">
+  <!-- 登录模块 -->
+  <view class="login">
+    <view class="headPhoto">
+      <image src="{{avatarUrl}}"></image>
+    </view>
+    <view class="userInfo" bindtap="getUserProfile">
+      <view>{{nickName}}</view>
+    </view>
+  </view>
+  <!-- 我的订单模块 -->
+  <view class="order">
+    <view class="myorder">
+      <text class="myorderTitle">我的订单</text>
+      <text class="myordermore" data-type="" bindtap="toOrder">查看全部订单></text>
+    </view>
+    <view class="oreritems">
+      <view class="oreritem" data-type="1" bindtap="toOrder">
+        <image src="{{imageurl}}/static/pay.png"></image>
+        <view>待付款</view>
+      </view>
+      <view class="oreritem" data-type="2" bindtap="toOrder">
+        <image src="{{imageurl}}/static/sendGoods.png"></image>
+        <view>待发货</view>
+      </view>
+      <view class="oreritem" data-type="3" bindtap="toOrder">
+        <image src="{{imageurl}}/static/receving.png"></image>
+        <view>待收货</view>
+      </view>
+      <view class="oreritem" data-type="4" bindtap="toOrder">
+        <image src="{{imageurl}}/static/evaluate.png"></image>
+        <view>待评价</view>
+      </view>
+    </view>
+  </view>
+  <view class="servicemodel">
+    <view class="serviceitem" bindtap="toAddress">
+      <image src="{{imageurl}}/static/address.png"></image>
+      <view>收货地址</view>
+      <image src="{{imageurl}}/static/entrance.png"></image>
+    </view>
+    <view class="serviceitem">
+      <image src="{{imageurl}}/static/service.png"></image>
+      <button open-type="contact" style="margin-left: 20rpx;">客户服务</button>
+      <image src="{{imageurl}}/static/entrance.png"></image>
+    </view>
+    <view class="serviceitem" bindtap="logout">
+      <image src="{{imageurl}}/static/logout.png"></image>
+      <view>退出登录</view>
+      <image src="{{imageurl}}/static/entrance.png"></image>
+    </view>
+  </view>
+</view>

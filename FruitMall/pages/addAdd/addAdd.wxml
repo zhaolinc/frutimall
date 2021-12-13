@@ -1,0 +1,52 @@
+<!--pages/addAdd/addAdd.wxml-->
+<view class="section">
+  <form bindsubmit="bindFormSubmit">
+    <view class="add_item">
+      <view class="add_text">收货人</view>
+      <view class="add_area">
+        <input type="text" placeholder="名字" name="name"/>
+      </view>
+      <view></view>
+    </view>
+    <view class="add_item">
+      <view class="add_text">手机号码</view>
+      <view class="add_area">
+        <input type="text" placeholder="手机号码" name="phone"/>
+      </view>
+      <view></view>
+    </view>
+    <view class="add_item">
+      <view class="add_text">性别</view>
+      <view class="add_area" style="background-color: white;">
+        <radio-group bindchange="radioChange" style="height: 50rpx; margin-top: 25rpx;">
+          <radio value="1" checked="true" name="gender"/>男
+          <radio value="0" name="gender" style="margin-left: 50rpx;"/>女
+        </radio-group>
+      </view>
+      <view></view>
+    </view>
+    <view class="add_item">
+      <view class="add_text">所在地区</view>
+      <view class="add_area">
+        <picker mode="region" bindchange="bindRegionChange" value="{{region}}" >
+        <input type="text" placeholder="所在地区" name="address" model:value="{{address}}" disabled="true" />
+        </picker>
+      </view>
+      <view></view>
+    </view>
+    <view class="add_detail">
+      <view class="add_detail_text">详细地址</view>
+      <view class="text_content">
+        <textarea placeholder="小区楼栋/乡村名称" name="adddetail"/>
+      </view>
+    </view>
+    <!-- 设置为默认 -->
+    <view class="defaultAdd">
+    <view class="default_text">设置默认收货地址</view>
+    <view class="default_btn">
+      <switch model:checked="{{switchChecked}}" bindchange="switchChange"/>
+    </view>
+    </view>
+    <button form-type="submit" class="btn"> 保存 </button>
+  </form>
+</view>

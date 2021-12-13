@@ -1,0 +1,46 @@
+<!--pages/fruitdetail/fruitdetail.wxml-->
+<view class="fruitdetail">
+  <!-- 图片 -->
+  <view class="detailImg">
+    <image src="{{fruit.filepath}}"></image>
+  </view>
+  <!-- 水果详细信息 -->
+  <view class="detailtitle">
+    <view class="fruitTitle"><text style="font-weight: bold;">{{fruit.title}}1KG </text>  {{fruit.detail}}</view>
+    <view class="fruitprice">￥{{fruit.price}}.00</view>
+  </view>
+  <!-- 选择规格 -->
+  <view class="select">
+    <view class="selectTop">
+      <view><text style="font-weight: bold;">规格</text><text style="margin-left: 30rpx;">1.00kg</text></view>
+      <image src="../../images/point.png"></image>
+    </view>
+    <view class="selectBotton">
+      <text style="font-weight: bold;">配送</text><text style="margin-left: 30rpx;">快递配送 .同城配送</text>
+    </view>
+  </view>
+  <!-- 详情 -->
+  <view class="detail">
+    <view class="xiangqing">水果详情</view>
+    <image src="{{fruit.filepath}}"></image>
+  </view>
+  <!-- 底部 -->
+  <view class="bottonTab">
+    <view class="icon1" bindtap="toservice">
+      <image src="../../images/service.png"></image>
+      <view>客服</view>
+    </view>
+    <view class="icon2" bindtap="tocart">
+      <image src="../../images/detailcart.png"></image>
+      <view>购物车</view>
+    </view>
+    <view class="icon3">
+      <view class="icon3left">
+        加入购物车
+      </view>
+      <view class="icon3right">
+        立即购买
+      </view>
+    </view>
+  </view>
+</view>

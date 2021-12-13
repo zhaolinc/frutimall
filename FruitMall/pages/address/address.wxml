@@ -1,0 +1,16 @@
+<!--pages/address/address.wxml-->
+<view class="address">
+  <scroll-view scroll-y="true">
+    <view class="scroll_item" wx:for-items="{{addressList}}" wx:key="addressid">
+      <view class="item_left">
+        <view class="top">
+          <view class="defalut" wx:if="{{item.type==1}}">默认</view><view>{{item.province}}{{item.city}}{{item.county}}</view>
+        </view>
+        <view class="midd">{{item.address}}</view>
+        <view class="botton"><view style="width: 150rpx;">{{item.name}}</view> <text>{{item.phone}}</text></view>
+      </view>
+      <image class="item_right" src="{{imageurl}}/static/edit.png" bindtap="toUpdate"></image>
+    </view>
+  </scroll-view>
+  <view class="add_btn" bindtap="toAdd">添加收货地址</view>
+</view>

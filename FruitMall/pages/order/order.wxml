@@ -1,0 +1,35 @@
+<!--pages/order/order.wxml-->
+<view class="order_content">
+  <view class="order_nav">
+    <view class="nav_item {{nav_item==0 ? 'active' : ''}}" data-nav="0" bindtap="changeNav">全部</view>
+    <view class="nav_item {{nav_item==1 ? 'active' : ''}}" data-nav="1" bindtap="changeNav">待付款</view>
+    <view class="nav_item {{nav_item==2 ? 'active' : ''}}" data-nav="2" bindtap="changeNav">待发货</view>
+    <view class="nav_item {{nav_item==3 ? 'active' : ''}}" data-nav="3" bindtap="changeNav">待收货</view>
+    <view class="nav_item {{nav_item==4 ? 'active' : ''}}" data-nav="4" bindtap="changeNav">待评价</view>
+  </view>
+  <view class="orders">
+  <scroll-view scroll-y="true" style="flex: 1;">
+    <view class="order_item" wx:for-items="{{orderList}}" wx:key="orderid">
+      <view class="item_top">
+      <image src="{{item.filepath}}"></image>
+      <view class="top_midd">
+        <view class="midd_top">{{item.fruitTitle}}</view>
+        <view class="midd_bottom">{{item.fruitDetail}}</view>
+      </view>
+      <view class="top_rigth">
+        <view class="right_top">￥{{item.sumprice}}.00</view>
+        <view class="right_bottom">x {{item.num}}</view>
+      </view>
+      </view>
+      <view class="item_bottom">
+        <view class="bottom_btn" wx:if="{{item.type == 1}}" data-type="1" data-orderid="{{item.orderid}}" bindtap="orderbtn">去付款</view>
+        <view class="bottom_btn" wx:if="{{item.type == 2}}">未发货</view>
+        <view class="bottom_btn" wx:if="{{item.type == 3}}" data-type="3" data-orderid="{{item.orderid}}" bindtap="orderbtn">确认收货</view>
+        <view class="bottom_btn" wx:if="{{item.type == 4}}" data-type="4" data-orderid="{{item.orderid}}" bindtap="orderbtn">去评价</view>
+        <view class="bottom_btn" wx:if="{{item.type == 5}}" style="color: orangered;">订单完成</view>
+      </view>
+    </view>
+    <view style="height: 100rpx;text-align: center;line-height: 100rpx;color: rgb(184, 179, 179);">客官，没有更多了！</view>
+  </scroll-view>
+  </view>
+</view>

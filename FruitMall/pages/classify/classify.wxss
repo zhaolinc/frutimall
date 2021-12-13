@@ -1,0 +1,121 @@
+/* pages/classify/classify.wxss */
+page{
+  height: 100%;
+  width: 100%;
+  background-color: rgb(225, 252, 241);
+}
+.classify{
+  height: 100%;
+  width: 100%;
+}
+/* 搜索框 */
+.search{
+  display: flex;
+  height: 8%;
+  width: 100%;
+  background-color: #47B34E;
+}
+.searchitem{
+  display: flex;
+  background-color: white;
+  height: 70%;
+  width: 90%;
+  margin-left: 5%;
+  margin-top: 2%;
+  border-radius: 30rpx;
+  line-height: 30rpx;
+}
+.searchitem image{
+  margin-left: 20rpx;
+  margin-top: 15rpx;
+  height: 40rpx;
+  width: 40rpx;
+}
+.searchitem text{
+  height: 100%;
+  color: rgb(138, 136, 136);
+  line-height: 68rpx;
+  margin-left: 20rpx;
+}
+/* 分类底部容器 */
+.content {
+  width: 100%;
+  height: 92%;
+  display: flex;
+  flex-direction: row;
+  font-family: "Microsoft YaHei"
+}
+/* 左边导航栏 */
+.left {
+  width: 24%;
+  font-size: 30rpx;
+  height: 100%;
+  background-color: #F4F4F4;
+}
+.left view {
+  text-align: center;
+  height: 90rpx;
+  line-height: 90rpx;
+}
+.select {
+  background-color: #ffffff;
+  border-left: 4rpx solid #36AE66;
+  font-weight: bold;
+  color: #36AE66;
+}
+.normal {
+  background-color: #F4F4F4;
+  border-bottom: 2rpx solid #f2f2f2;
+}
+/* 右边列表 */
+.right {
+  width: 74%;
+  margin: 0px;
+  margin-left: 2%;
+}
+scroll-view{
+  height: 100%;
+  width: 100%;
+}
+/* 列表item */
+.fruit{
+  display: flex;
+  width: 97%;
+  height: 160rpx;
+  margin-top: 15rpx;
+  background-color: white;
+}
+.fruit image{
+  height: 100%;
+  width: 160rpx;
+}
+.fruitright{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  flex: 1;
+  margin-left: 20rpx;
+}
+.item1{
+  width: 100%;
+  flex: 1;
+  line-height: 80rpx;
+}
+.item2{
+  display: flex;
+  width: 100%;
+  flex: 1;
+  line-height: 80rpx;
+  color: orange;
+}
+.item2 view{
+  height: 100%;
+  flex: 1;
+}
+.item2 image{
+  height: 40rpx;
+  width: 40rpx;
+  border: 2rpx orange solid;
+  border-radius: 43rpx;
+  margin-right: 20rpx;
+}

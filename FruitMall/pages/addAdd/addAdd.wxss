@@ -1,0 +1,82 @@
+/* pages/addAdd/addAdd.wxss */
+/* 收货人，手机号码，所在地区，性别样式 */
+.add_item{
+  display: flex;
+  height: 150rpx;
+  width: 100%;
+}
+.add_text{
+  height: 100%;
+  width: 150rpx;
+  margin-left: 30rpx;
+  line-height: 150rpx;
+  font-weight: bold;
+}
+.add_area{
+  height: 100rpx;
+  flex: 1;
+  margin-right: 30rpx;
+  margin-top: 25rpx;
+  border-radius: 30rpx;
+  background-color: rgb(245,245,244);
+}
+.add_area input{
+  height: 80rpx;
+  width: 90%;
+  margin-top: 10rpx;
+  margin-left: 5%;
+}
+/* 收货人，手机号码，所在地区，性别样式 */
+
+/* 详细地址样式 */
+.add_detail{
+  display: flex;
+  height: 200rpx;
+  width: 100%;
+}
+.add_detail_text{
+  height: 100%;
+  width: 150rpx;
+  margin-left: 30rpx;
+  line-height: 200rpx;
+  font-weight: bold
+}
+.text_content{
+  height: 80%;
+  flex: 1;
+  margin-right: 30rpx;
+  margin-top: 20rpx;
+  border-radius: 30rpx;
+  background-color: rgb(245,245,244);
+}
+.text_content textarea{
+  height: 96%;
+  width: 90%;
+  margin-top: 2%;
+  margin-left: 5%;
+}/* 详细地址样式 */
+
+/* 设置为默认 */
+.defaultAdd{
+  display: flex;
+  height: 100rpx;
+  width: 100%;
+}
+.default_text{
+  flex: 1;
+  margin-left: 30rpx;
+  line-height: 120rpx;
+  font-weight: bold;
+}
+.default_btn{
+  width: 114rpx;
+  margin-right: 30rpx;
+  line-height: 100rpx;
+}
+/* 保存按钮 */
+.btn{
+  background: -webkit-linear-gradient(left,rgb(248, 137, 89),rgb(248, 81, 9));
+  border-radius: 100rpx;
+  margin-top: 50rpx;
+  color: white;
+}

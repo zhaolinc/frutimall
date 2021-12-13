@@ -1,0 +1,190 @@
+/* pages/cart/cart.wxss */
+page{
+  height: 100%;
+  width: 100%;
+}
+/* 未登录样式 */
+.cartNoLogin{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  background-color: rgb(225, 252, 241);
+}
+.noLoginShow{
+  width: 100%;
+  height: 750rpx;
+  margin-top: 30%;
+}
+.noLoginShow image{
+  margin-left: 275rpx;
+  height: 200rpx;
+  width: 200rpx;
+}
+.cartNoLoginInfo{
+  width: 100%;
+  text-align: center;
+  height: 100rpx;
+  line-height: 100rpx;
+  font-weight: bold;
+}
+.nologinBtn{
+  height: 80rpx;
+  width: 200rpx;
+  margin-left: 275rpx;
+  background-color: rgb(247, 168, 94);
+  border-radius: 50rpx;
+  text-align: center;
+  line-height: 80rpx;
+  color: white;
+}
+
+/* 登录样式 */
+.cartLogin{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+.address{
+  display: flex;
+  height: 100rpx;
+  width: 100%;
+}
+.item1{
+  height: 100%;
+  width: 100rpx;
+  margin-left: 15rpx;
+}
+.item1 image{
+  height: 50%;
+  width: 50%;
+  margin-top: 25%;
+  margin-left: 25%;
+}
+.item2{
+  height: 100%;
+  flex: 1;
+  line-height: 101rpx;
+  color: rgb(146, 140, 140);
+  font-size: small;
+}
+.item3{
+  height: 100%;
+  width: 100rpx;
+}
+.item3 image{
+  height: 50%;
+  width: 50%;
+  margin-top: 25%;
+  margin-left: 25%;
+
+}
+/* 购物车列表 */
+.scroll-space{
+  flex: 1;
+  width: 100%;
+  background-color: rgb(225, 252, 241);
+}
+scroll-view{
+  width: 100%;
+  height: 1080rpx;
+  padding-bottom: 115rpx;
+}
+.cartitem{
+  display: flex;
+  height: 200rpx;
+  width: 96%;
+  margin-left: 2%;
+  background-color: white;
+  margin-top: 15rpx;
+}
+.selected{
+  line-height: 200rpx;
+  margin-left: 10rpx;
+}
+.filePath{
+  height: 100%;
+  width: 180rpx;
+}
+.filePath image{
+  height: 80%;
+  width: 90%;
+  margin-top: 10%;
+  border-radius: 10rpx;
+}
+.fruitDetail{
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  height: 100%;
+}
+.fruitTitle{
+  display: flex;
+  flex: 1;
+  width: 100%;
+}
+.fruitPrice{
+  display: flex;
+  flex: 1;
+  width: 100%;
+}
+.fruitPrice text{
+  flex: 1;
+  height: 100%;
+  line-height: 80rpx;
+}
+.fruitNum{
+  display: flex;
+  height: 60rpx;
+  width: 150rpx;
+  margin-right: 30rpx;
+  /* border: 2rpx solid rgb(24, 177, 24); */
+  border-radius: 30rpx;
+}
+.fruitNum text{
+  flex:1;
+  height: 100%;
+  line-height: 60rpx;
+  text-align: center;
+}
+.fruitNum image{
+  height: 60%;
+  width: 36rpx;
+  margin-top: 12rpx;
+  border-radius: 27rpx;
+  border: 1rpx solid springgreen;
+}
+/* 购物车底部 */
+.cartBotton{
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  height: 100rpx;
+  width: 100%;
+  background-color: white;
+}
+.selectAll{
+  width: 60rpx;
+  height: 100%;
+  line-height: 97rpx;
+  margin-left: 30rpx;
+}
+.cartBotton text{
+  line-height: 100rpx;
+}
+.sumprice{
+  flex:1;
+  margin-left: 50rpx;
+}
+.account{
+  height: 74%;
+  margin-top: 13rpx;
+  width: 200rpx;
+  background-color: #47B34E;
+  border-radius: 50rpx;
+  text-align: center;
+  line-height: 74rpx;
+  margin-right: 20rpx;
+  color: white;
+}

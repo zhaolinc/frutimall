@@ -1,0 +1,189 @@
+/**index.wxss**/
+page{
+  height: 100%;
+  width: 100%;
+}
+.main{
+width: 100%;
+height: auto;
+display: flex;
+flex-direction: column;
+}
+swiper{
+  height: 430rpx;
+  width: 100%;
+}
+swiper-item{
+  height: 100%;
+  width: 100%;
+}
+swiper-item image{
+  height: 100%;
+  width: 100%;
+}
+/* 首页分类 */
+.indexClassify{
+  height: 240rpx;
+  width: 100%;
+  display: flex;
+  background-color: rgb(243, 213, 174);
+}
+.indexClassify image{
+  height: 79%;
+  flex: 1;
+  margin-top: 3%;
+}
+.indexClassify view{
+  height: 100%;
+  width: 3%;
+}
+/* 特价专区 */
+.lowPrice{
+  display: flex;
+  width: 100%;
+  height: 120rpx;
+}
+.lowPrice view{
+  flex: 1;
+}
+.lowPrice image{
+  width: 25%;
+  height: 55%;
+}
+.priceMiddle{
+  text-align: center;
+}
+.priceMiddle view{
+  height: 50%;
+  width: 100%;
+}
+.middle1{
+  font-weight: bold;
+  line-height: 70rpx;
+}
+.middle2{
+  font-size: 20rpx;
+  color: rgb(126, 125, 125);
+}
+/* 特价水果推荐 */
+.fruitrecommend{
+  width: 100%;
+  height: 370rpx;
+}
+scroll-view{
+  height: 100%;
+  white-space: nowrap;
+}
+scroll-view view{
+  height: 100%;
+  width: 35%;
+}
+.scroll-view-item{
+  display: flex;
+  flex-direction: column;
+  margin-right: 10rpx;
+  display: inline-block;
+}
+.scroll-view-item image{
+  width: 100%;
+  height: 262rpx;
+}
+.scroll-view-item-botton{
+  width: 100%;
+  height: 108rpx;
+  display: flex;
+  flex-direction: column;
+}
+.scroll-view-item-botton view{
+  width: 100%;
+  flex: 1;
+}
+.fruitTitle text{
+  margin-left: 20rpx;
+}
+.scroll-view-item-text{
+  display: flex;
+  line-height: 69rpx;
+}
+.scroll-view-item-text text{
+  flex: 1;
+  height: 100%;
+  line-height: 69rpx;
+  color: rgb(247,149,11);
+}
+.scroll-view-item-text image{
+  height: 40rpx;
+  width: 40rpx;
+  margin-right: 20rpx;
+  border: 2rpx orange solid;
+  border-radius:35rpx ;
+}
+
+.commendTitle{
+  width: 90%;
+  margin-left: 5%;
+  height: 80rpx;
+  font-size: 35rpx;
+  font-weight: bold;
+  line-height: 80rpx;
+}
+/* 水果推荐 */
+.commendView{
+  width: 100%;
+  height: auto;
+  background-color: rgb(225, 252, 241);
+}
+.tuijianitem{
+  height: 500rpx;
+  width: 47%;
+  margin-left: 2%;
+  box-sizing: border-box;
+  float: left;
+  background-color:white;
+  margin-top: 16rpx;
+}
+.itemImg{
+  width: 100%;
+  height: 375rpx;
+}
+.itemImg image{
+  height: 100%;
+  width: 100%;
+}
+.fruitname{
+  width: 100%;
+  height: 62.5rpx;
+  line-height: 62.5rpx;
+  font-size: 35rpx;
+}
+.fruitBotton{
+  display: flex;
+  width: 100%;
+  height: 62.5rpx;
+  line-height: 62.5rpx;
+}
+.fruitprice{
+  height: 100%;
+  flex: 1;
+  color: orange;
+}
+.addCart{
+  height: 100%;
+  flex: 1;
+  text-align: right;
+}
+.addCart image{
+  height: 40rpx;
+  width: 40rpx;
+  margin-right: 40rpx;
+  border: 2rpx orange solid;
+  border-radius:35rpx;
+}
+/* 底部 */
+.botton{
+  height: 100rpx;
+  width: 100%;
+  background-color: rgb(225, 252, 241);
+  text-align: center;
+  line-height: 100rpx;
+}

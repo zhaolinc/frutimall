@@ -1,0 +1,9 @@
+/* pages/service/service.wxss */
+page{
+  height: 100%;
+  width: 100%;
+  background-color: rgb(225, 252, 241);
+}
+button{
+  margin-top: 40%;
+}

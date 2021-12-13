@@ -1,0 +1,124 @@
+/* pages/user/user.wxss */
+page{
+  height: 100%;
+  width: 100%;
+}
+.main{
+  height: 100%;
+  width: 100%;
+  background-color: rgb(225, 252, 241);
+}
+/* 登录样式 */
+.login{
+  display: flex;
+  height: 200rpx;
+  width: 100%;
+  background-image: url('http://139.196.192.222/FruitMall/static/bg_login.png');
+  background-size: cover;
+}
+.headPhoto{
+  height: 100%;
+  width: 200rpx;
+  box-sizing: border-box;
+}
+.headPhoto image{
+  margin-top: 15%;
+  margin-left: 12%;
+  height: 60%;
+  width: 60%;
+  border-radius: 77rpx;
+  border: 4rpx solid white;
+  background-color: white;
+}
+.userInfo{
+  height: 100%;
+  flex: 1;
+  color: white;
+  line-height: 180rpx;
+}
+
+/* 订单样式 */
+.order{
+  height: 250rpx;
+  width: 96%;
+  margin-left: 2%;
+  border-radius: 15rpx;
+  background-color: white;
+}
+.myorder{
+  margin-top: 20rpx;
+  display: flex;
+  height: 35%;
+  width: 100%;
+  line-height: 87.5rpx;
+  font-family: '微软雅黑';
+}
+.myorderTitle{
+  margin-left: 30rpx;
+  flex: 1;
+  font-weight: bold;
+}
+.myordermore{
+  flex: 1;
+  text-align: right;
+  margin-right: 30rpx;
+  font-size: 27rpx;
+  color: rgb(177, 174, 171);
+}
+.oreritems{
+  display: flex;
+  height: 65%;
+  width: 100%;
+}
+.oreritem{
+  flex: 1;
+}
+.oreritem image{
+  margin-left: 33%;
+  margin-top: 20%;
+  height: 34%;
+  width: 34%;
+}
+.oreritem view{
+  width: 100%;
+  margin-top: 5%;
+  text-align: center;
+  font-size: 27rpx;
+}
+
+/* 功能与服务 */
+.servicemodel{
+  width: 96%;
+  margin-left: 2%;
+  border-radius: 15rpx;
+  margin-top: 30rpx;
+}
+.serviceitem{
+  display: flex;
+  height: 90rpx;
+  width: 100%;
+  background-color: white;
+  line-height: 90rpx;
+  margin-top: 8rpx;
+}
+.serviceitem image{
+  height: 56%;
+  width: 52rpx;
+  margin-top: 3%;
+  margin-left: 2%;
+}
+.serviceitem view{
+  flex: 1;
+  height: 100%;
+  margin-left: 20rpx;
+}
+.serviceitem button{
+  flex: 1;
+  height: 100%;
+  background-color: white;
+  text-align: left;
+  font-size:medium;
+  font-weight: normal;
+  padding: 0;
+  line-height: 90rpx;
+}

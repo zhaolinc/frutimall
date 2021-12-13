@@ -1,0 +1,66 @@
+<!--index.wxml-->
+<view class="main">
+
+  <!-- 轮播图 -->
+  <swiper indicator-dots indicator-color='#FFFAFA' indicator-active-color='#01CF37' autoplay interval='5000' circular >
+    <swiper-item><image src="{{imageurl}}/static/swiper1.jpg"></image></swiper-item>
+    <swiper-item><image src="{{imageurl}}/static/swiper2.jpg"></image></swiper-item>
+    <swiper-item><image src="{{imageurl}}/static/swiper3.jpg"></image></swiper-item>
+    <swiper-item><image src="{{imageurl}}/static/swiper4.jpg"></image></swiper-item>
+    <swiper-item><image src="{{imageurl}}/static/swiper5.jpg"></image></swiper-item>
+    <swiper-item><image src="{{imageurl}}/static/swiper6.jpg"></image></swiper-item>
+  </swiper>
+  <!-- 首页分类 -->
+  <view class="indexClassify">
+    <view></view>
+    <image src="{{imageurl}}/static/indexClassify1.png" data-id="1" bindtap="toClassify"></image>
+    <view></view>
+    <image src="{{imageurl}}/static/indexClassify2.png" data-id="2" bindtap="toClassify"></image>
+    <view></view>
+  </view>
+  <!-- 特价专区 -->
+  <view class="lowPrice">
+    <view><image src="{{imageurl}}/static/lowPrice.png"></image></view>
+    <view class="priceMiddle">
+      <view class="middle1">特价专区</view>
+      <view class="middle2">精选特价水果，超级性价比</view>
+    </view>
+    <view></view>
+  </view>
+  <!-- 特价专区水果 -->
+  <view class="fruitrecommend">
+    <scroll-view class="scroll-view_H" scroll-x="true" bindscroll="scroll" style="width: 100%;">
+      <view class="scroll-view-item" wx:for-items="{{lowfruitList}}" wx:key="fruitid" >
+        <image src="{{item.filepath}}" data-fruitid="{{item.fruitid}}" bindtap="toDetail"></image>
+        <view class="scroll-view-item-botton">
+          <view class="fruitTitle"><text>{{item.title}}</text></view>
+          <view class="scroll-view-item-text">
+            <text>￥{{item.price}}.00</text>
+            <image src="{{imageurl}}/static/cart.png" data-item="{{item}}" bindtap="addtoCart"></image>
+          </view>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+  <view class="commendTitle">
+  水果推荐
+  </view>
+  <!-- 水果推荐 -->
+  <view class="commendView">
+    <view class="tuijianitem" wx:for-items="{{indexList}}" wx:key="fruitid">
+      <view class="itemImg" data-id="{{item.fruitid}}" bindtap="toDetail"><image src="{{item.filepath}}"></image></view>
+      <!-- 水果标题 -->
+      <view class="fruitname">{{item.title}}</view>
+      <view class="fruitBotton">
+      <!-- 水果价格 -->
+      <view class="fruitprice">￥{{item.price}}.00</view>
+      <!-- 购物车图片 -->
+      <view class="addCart"><image src="{{imageurl}}/static/cart.png" 
+        data-item="{{item}}" bindtap="addtoCart"></image></view>
+      </view>
+    </view>
+  </view>
+  <view class="botton">
+    我可是有底线的！
+  </view>
+</view>

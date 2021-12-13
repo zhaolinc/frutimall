@@ -1,0 +1,77 @@
+/* pages/address/address.wxss */
+page{
+  height: 100%;
+  width: 100%;
+}
+.address{
+  height: 100%;
+  width: 100%;
+}
+scroll-view{
+  width: 100%;
+}
+.scroll_item{
+  display: flex;
+  height: 150rpx;
+  width: 92%;
+  margin-left: 4%;
+  margin-top: 20rpx;
+  border-bottom: 2rpx solid rgb(211, 208, 208);
+}
+.item_left{
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  height: 100%;
+}
+.top{
+  display: flex;
+  flex: 1;
+  width: 100%;
+  line-height: 50rpx;
+  color: rgb(138, 133, 133);
+  font-size: 25rpx
+}
+.defalut{
+  height: 30rpx;
+  width: 55rpx;
+  margin-top: 10rpx;
+  background-color: red;
+  color: white;
+  font-size: 20rpx;
+  border-radius: 6rpx;
+  line-height: 30rpx;
+  text-align: center;
+}
+.midd{
+  flex: 1;
+  width: 100%;
+  line-height: 50rpx;
+  font-weight: bold;
+  font-size: 30rpx;
+}
+.botton{
+  display: flex;
+  flex: 1;
+  width: 100%;
+  line-height: 50rpx;
+  color: rgb(138, 133, 133);
+  font-size: 25rpx
+}
+.item_right{
+  height: 50rpx;
+  width: 50rpx;
+  margin-top: 50rpx;
+}
+.add_btn{
+  position: fixed;
+  bottom: 40rpx;
+  left: 20rpx;
+  height: 70rpx;
+  width: 710rpx;
+  background-color: #47B34E;
+  border-radius: 50rpx;
+  line-height: 70rpx;
+  text-align: center;
+  color: white;
+}

@@ -1,0 +1,36 @@
+<!--pages/classify/classify.wxml-->
+<view class="classify">
+  <!-- 导航栏 -->
+  <view class="search">
+    <view class="searchitem">
+      <image src="../../images/search.png"></image>
+      <text>苹果</text>
+    </view>
+  </view>
+  <!-- 底部列表容器 -->
+  <view class="content">
+    <!-- 右边导航栏 -->
+    <view class='left'>
+      <view class="{{currentTab==0?'select':'normal'}}" id='0' bindtap='switchNav'>全部</view>
+      <view class="{{currentTab==1?'select':'normal'}}" id='1' bindtap='switchNav'>水果</view>
+      <view class="{{currentTab==2?'select':'normal'}}" id='2' bindtap='switchNav'>干果</view>
+      <view class="{{currentTab==3?'select':'normal'}}" id='3' bindtap='switchNav'>特价</view>
+    </view>
+    <!-- 右边列表 -->
+    <view class='right'>
+      <scroll-view scroll-y="true">
+        <view class="fruit" wx:for-items="{{fruitList}}" wx:key="fruitid">
+          <image src="{{item.filepath}}" data-fruitid="{{item.fruitid}}" bindtap="toDetail"></image>
+          <view class="fruitright">
+            <view class="item1">{{item.title}}</view>
+            <view class="item2">
+            <view>￥{{item.price}}.00</view>
+            <image src="{{imageurl}}/static/cart.png" data-item="{{item}}" bindtap="addtoCart"></image>
+            </view>
+          </view>
+        </view>
+      </scroll-view>
+    </view>
+    
+  </view>
+</view>

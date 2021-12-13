@@ -1,0 +1,52 @@
+<!--pages/cart/cart.wxml-->
+<!-- 未登录显示 -->
+<view class="cartNoLogin" wx:if="{{login==false}}">
+  <view class="noLoginShow">
+    <image src="{{imageurl}}/static/cart1.png"></image>
+    <view class="cartNoLoginInfo">您还未登录</view>
+    <view class="nologinBtn" bindtap="tologin">登录/注册</view>
+  </view>
+</view>
+<!-- 登录成功显示 -->
+<view class="cartLogin" wx:else="{{login==true}}">
+  <view class="address">
+    <view  class="item1"><image src="{{imageurl}}/static/position.png"></image></view>
+    <view class="item2">{{address}}</view>
+    <view class="item3" bindtap="selectAddress"><image src="{{imageurl}}/static/more.png"></image></view>
+  </view>
+  <view class="scroll-space">
+    <scroll-view scroll-y="true">
+    <view class="cartitem" wx:for-items="{{cartList}}" wx:key="fruitid">
+      <!-- 选择框 -->
+      <checkbox class="selected" checked="{{item.selected}}" data-fruitid="{{item.fruitid}}" bindtap="selected"/>
+      <!-- 图片 -->
+      <view class="filePath"><image src="{{item.filepath}}"></image></view> 
+      <!-- 详情 -->
+      <view class="fruitDetail">
+        <view class="fruitTitle">
+          <view style="flex: 1;line-height: 100rpx;font-weight: bold;">{{item.title}}</view>
+          <view style="color: red;width: 80rpx;" data-fruitid="{{item.fruitid}}" bindtap="deleteed">删除</view>
+        </view>
+        <view class="fruitPrice">
+          <text>单价:<text style="color: orange;">￥{{item.price}}.00/kg</text></text>
+          <view class="fruitNum">
+          <!-- 减号 -->
+            <image src="{{imageurl}}/static/sub.png" 
+            data-fruitid="{{item.fruitid}}" bindtap="subNum"></image>
+            <text style="font-weight: 500;">{{item.num}}</text>
+            <!-- 加号 -->
+            <image src="{{imageurl}}/static/add.png" style="background-color: springgreen;" 
+            data-fruitid="{{item.fruitid}}" bindtap="addNum"></image>
+          </view>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+  </view>
+  <view class="cartBotton">
+    <checkbox class="selectAll" model:checked="{{select}}" bindtap="selectAll"/>
+    <text>全选</text>
+    <view class="sumprice">合计: <text style="color: orange;">￥{{sumPrice}}.00</text></view>
+    <view class="account" bindtap="account">立即结算</view>
+  </view>
+</view>
